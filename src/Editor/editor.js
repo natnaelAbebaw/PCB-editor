@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
-import Sizes from "./Utils/Sizes.js";
-import Time from "./Utils/Time.js";
+import Sizes from "./utils/Sizes.js";
+import Time from "./utils/Time.js";
 import Camera from "./camera.js";
 import Renderer from "./renderer.js";
 import PrimitiveManager from "./components/PrimitiveManager.js";
