@@ -14,14 +14,12 @@ Overall, this strategy keeps the scene lightweight, minimizes draw calls, and al
 
 ## Z-fighting mitigation strategy
 
-Because a PCB is composed of many extremely thin and closely layered surfaces (board substrate, copper layers, pads, traces, and outlines), Z-fighting can easily occur if all geometry is rendered at the same depth. Preventing this was an important part of the rendering strategy.
+Because a PCB is made up of many very thin layers placed close to each other, Z-fighting can easily happen if multiple surfaces are rendered at the same depth. To avoid this, I made sure that each PCB layer is rendered slightly above or below the others.
 
-To mitigate Z-fighting, I used a combination of explicit layer spacing and polygon offset, depending on the type of geometry.
+I assigned small but consistent height offsets to the board, copper layers, pads, and traces so they never sit exactly on the same plane. Even though these offsets are very small, they are enough to keep the depth buffer stable and prevent flickering.
 
-First, each logical PCB layer (board surface, top copper, bottom copper, pads, and traces) is rendered at a slightly different Y offset. These offsets are very small but consistent, which ensures that surfaces never occupy the exact same depth in the depth buffer. This approach is predictable and works well for flat, layered geometry like PCBs.
+In cases where geometry is still very close, such as pads and traces rendered directly on top of the copper layer, I also use polygon offset in the material. This helps ensure that the copper features always render cleanly above the board surface.
 
-For additional safety—especially for coplanar geometry such as pads and traces rendered on top of the copper layer—I enabled polygon offset on materials. Polygon offset shifts the depth values at rasterization time, ensuring that copper features are consistently rendered above the board surface without flickering.
+For edge outlines, I keep depth testing enabled and disable depth writing, instead of drawing everything on top. This way, outlines are visible where they should be, but they don’t appear through the board or other geometry behind them.
 
-For edge outlines, I avoided disabling depth testing globally. Instead, outlines are rendered with depth testing enabled but with depth writing disabled and a slightly higher render order. This ensures that edges are visible on the front-facing geometry while still being correctly occluded by objects in front, preventing outlines from appearing through the board.
-
-By combining small, intentional layer offsets with polygon offset and careful depth settings, the scene remains visually stable and free of Z-fighting even when rendering many thin, overlapping PCB features.
+By combining small layer offsets with polygon offset and careful depth settings, the PCB renders consistently without Z-fighting, even with many thin and overlapping elements.
