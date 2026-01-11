@@ -4,7 +4,7 @@ import Sizes from "./utils/Sizes.js";
 import Time from "./utils/Time.js";
 import Camera from "./camera.js";
 import Renderer from "./renderer.js";
-import PrimitiveManager from "./components/primitiveManager.js";
+import PrimitiveManager from "./components/PrimitiveManager.js";
 import SelectionStore from "./interactions/selectionStore.js";
 import TransformGizmo from "./interactions/transformGizmo.js";
 import InteractionManager from "./interactions/InteractionManager.js";
