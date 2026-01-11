@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "board": {
+    "width": 6,
+    "height": 0.1,
+    "depth": 4
+  },
+  "holes": [
+    {
+      "x": 0.5,
+      "z": 0.5,
+      "r": 0.03
+    },
+    {
+      "x": 0.2,
+      "z": 0.7,
+      "r": 0.03
+    },
+    {
+      "x": -0.2,
+      "z": 0.7,
+      "r": 0.03
+    },
+    {
+      "x": 0.2,
+      "z": -0.7,
+      "r": 0.03
+    },
+    {
+      "x": -0.5,
+      "z": 0.5,
+      "r": 0.03
+    },
+    {
+      "x": -1,
+      "z": 0.9,
+      "r": 0.03
+    },
+    {
+      "x": -0.2,
+      "z": -0.7,
+      "r": 0.03
+    },
+    {
+      "x": 0.57,
+      "z": -0.9,
+      "r": 0.03
+    },
+    {
+      "x": -0.5,
+      "z": -0.5,
+      "r": 0.03
+    },
+    {
+      "x": 0.5,
+      "z": 0.9,
+      "r": 0.03
+    },
+    {
+      "x": -0.5,
+      "z": 0.5,
+      "r": 0.03
+    }
+  ],
+  "pads": [
+    {
+      "shape": "RECTANGLE",
+      "layer": "TOP_COPPER",
+      "name": "SMD_PADS_RECTANGLE",
+      "defaultPadSize": [
+        0.1,
+        0.1
+      ],
+      "defaultRadius": 0.09,
+      "defaultThickness": 0.001,
+      "padAttributes": [
+        {
+          "name": "SMD_PAD_1",
+          "size": [
+            2,
+            2
+          ],
+          "position": [
+            -0.9999999665377434,
+            0.900000020077354
+          ]
+        },
+        {
+          "name": "SMD_PAD_2",
+          "size": [
+            3,
+            3
+          ],
+          "position": [
+            -0.4999999832688717,
+            0.4999999937258269
+          ]
+        },
+        {
+          "name": "SMD_PAD_3",
+          "size": [
+            2,
+            2
+          ],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "SMD_PAD_4",
+          "size": [
+            2,
+            2
+          ],
+          "position": [
+            0.9999999665377434,
+            -0.7000000225870233
+          ]
+        },
+        {
+          "name": "SMD_PAD_5",
+          "size": [
+            3,
+            3
+          ],
+          "position": [
+            0.4999999832688717,
+            -0.7000000225870233
+          ]
+        },
+        {
+          "name": "SMD_PAD_6",
+          "size": [
+            2.5,
+            2.5
+          ],
+          "position": [
+            0.4999999832688717,
+            0.900000020077354
+          ]
+        },
+        {
+          "name": "SMD_PAD_7",
+          "size": [
+            4,
+            4
+          ],
+          "position": [
+            0.799999989961323,
+            0.799999989961323
+          ]
+        },
+        {
+          "name": "SMD_PAD_8",
+          "size": [
+            3,
+            3
+          ],
+          "position": [
+            0.30000000669245136,
+            0.2999999962354961
+          ]
+        }
+      ]
+    },
+    {
+      "shape": "CIRCLE",
+      "layer": "TOP_COPPER",
+      "name": "SMD_PADS_CIRCLE",
+      "defaultPadSize": [
+        0.1,
+        0.1
+      ],
+      "defaultRadius": 0.09,
+      "defaultThickness": 0.001,
+      "padAttributes": [
+        {
+          "name": "SMD_PAD_1",
+          "radius": 2,
+          "position": [
+            0.7000000016731129,
+            0.3400000145560817
+          ]
+        },
+        {
+          "name": "SMD_PAD_2",
+          "radius": 2,
+          "position": [
+            -0.013710317904489084,
+            0.12992067556632192
+          ]
+        },
+        {
+          "name": "SMD_PAD_3",
+          "radius": 2,
+          "position": [
+            0.010701329692413934,
+            -0.1568323530648884
+          ]
+        },
+        {
+          "name": "SMD_PAD_4",
+          "radius": 2,
+          "position": [
+            0.08995163858982556,
+            -0.03241876042202899
+          ]
+        },
+        {
+          "name": "SMD_PAD_5",
+          "radius": 2,
+          "position": [
+            -0.1238719517724556,
+            0.004007494763324135
+          ]
+        }
+      ]
+    },
+    {
+      "shape": "CIRCLE",
+      "layer": "BOTTOM_COPPER",
+      "name": "SMD_PADS_CIRCLE",
+      "defaultPadSize": [
+        0.1,
+        0.1
+      ],
+      "defaultRadius": 0.09,
+      "defaultThickness": 0.001,
+      "padAttributes": [
+        {
+          "name": "SMD_PAD_1",
+          "radius": 2,
+          "position": [
+            0.7000000016731129,
+            0.3400000145560817
+          ]
+        },
+        {
+          "name": "SMD_PAD_2",
+          "radius": 2,
+          "position": [
+            0,
+            0.4999999937258269
+          ]
+        },
+        {
+          "name": "SMD_PAD_3",
+          "radius": 2,
+          "position": [
+            0,
+            -0.4999999937258269
+          ]
+        },
+        {
+          "name": "SMD_PAD_4",
+          "radius": 2,
+          "position": [
+            0.4999999832688717,
+            0
+          ]
+        },
+        {
+          "name": "SMD_PAD_5",
+          "radius": 2,
+          "position": [
+            -0.4999999832688717,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "shape": "RECTANGLE",
+      "layer": "BOTTOM_COPPER",
+      "name": "SMD_PADS_RECTANGLE",
+      "defaultPadSize": [
+        0.1,
+        0.1
+      ],
+      "defaultRadius": 0.09,
+      "defaultThickness": 0.001,
+      "padAttributes": [
+        {
+          "name": "SMD_PAD_1",
+          "size": [
+            2,
+            2
+          ],
+          "position": [
+            -0.9999999665377434,
+            0.900000020077354
+          ]
+        },
+        {
+          "name": "SMD_PAD_2",
+          "size": [
+            3,
+            3
+          ],
+          "position": [
+            -0.4999999832688717,
+            0.4999999937258269
+          ]
+        },
+        {
+          "name": "SMD_PAD_3",
+          "size": [
+            2,
+            2
+          ],
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "SMD_PAD_4",
+          "size": [
+            2,
+            2
+          ],
+          "position": [
+            0.9999999665377434,
+            -0.7000000225870233
+          ]
+        },
+        {
+          "name": "SMD_PAD_5",
+          "size": [
+            3,
+            3
+          ],
+          "position": [
+            0.4999999832688717,
+            -0.7000000225870233
+          ]
+        },
+        {
+          "name": "SMD_PAD_6",
+          "size": [
+            2.5,
+            2.5
+          ],
+          "position": [
+            0.4999999832688717,
+            0.900000020077354
+          ]
+        },
+        {
+          "name": "SMD_PAD_7",
+          "size": [
+            4,
+            4
+          ],
+          "position": [
+            0.799999989961323,
+            0.799999989961323
+          ]
+        },
+        {
+          "name": "SMD_PAD_8",
+          "size": [
+            3,
+            3
+          ],
+          "position": [
+            0.30000000669245136,
+            0.2999999962354961
+          ]
+        }
+      ]
+    }
+  ],
+  "traces": [
+    {
+      "layer": "TOP_COPPER",
+      "width": 0.03,
+      "points": [
+        {
+          "x": 0,
+          "z": 0
+        },
+        {
+          "x": 0.5,
+          "z": 0
+        },
+        {
+          "x": 0.5,
+          "z": 0.5
+        },
+        {
+          "x": 0,
+          "z": 0.5
+        }
+      ]
+    },
+    {
+      "layer": "BOTTOM_COPPER",
+      "width": 0.03,
+      "points": [
+        {
+          "x": 0,
+          "z": 0
+        },
+        {
+          "x": 0.5,
+          "z": 0
+        },
+        {
+          "x": 0.5,
+          "z": 0.5
+        },
+        {
+          "x": 0,
+          "z": 0.5
+        }
+      ]
+    },
+    {
+      "layer": "BOTTOM_COPPER",
+      "width": 0.03,
+      "points": [
+        {
+          "x": -0.7,
+          "z": -0.7
+        },
+        {
+          "x": -0.7,
+          "z": -0.5
+        },
+        {
+          "x": 0.8,
+          "z": -0.5
+        },
+        {
+          "x": 0.8,
+          "z": 0.5
+        }
+      ]
+    }
+  ]
+}
