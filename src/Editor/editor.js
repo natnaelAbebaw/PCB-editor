@@ -7,7 +7,7 @@ import Renderer from "./renderer.js";
 import PrimitiveManager from "./components/primitiveManager.js";
 import SelectionStore from "./interactions/selectionStore.js";
 import TransformGizmo from "./interactions/transformGizmo.js";
-import InteractionManager from "./interactions/interactionManager.js";
+import InteractionManager from "./interactions/InteractionManager.js";
 import pcbJson from "./pcb.json";
 
 
