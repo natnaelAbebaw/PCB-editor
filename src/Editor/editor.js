@@ -4,10 +4,10 @@ import Sizes from "./utils/Sizes.js";
 import Time from "./utils/Time.js";
 import Camera from "./camera.js";
 import Renderer from "./renderer.js";
-import PrimitiveManager from "./components/PrimitiveManager.js";
+import PrimitiveManager from "./components/primitiveManager.js";
 import SelectionStore from "./interactions/selectionStore.js";
-import TransformGizmo from "./interactions/TransformGizmo.js";
-import InteractionManager from "./interactions/InteractionManager.js";
+import TransformGizmo from "./interactions/transformGizmo.js";
+import InteractionManager from "./interactions/interactionManager.js";
 import pcbJson from "./pcb.json";
 
 
