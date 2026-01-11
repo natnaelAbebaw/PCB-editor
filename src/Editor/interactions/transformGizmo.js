@@ -8,18 +8,15 @@ export default class TransformGizmo {
     this.tc.setMode("translate");
     this.tc.showY = false; // hide Y axis handle
 
-    // In three@0.182, TransformControls is NOT an Object3D; add its helper to the scene.
     this.helper = this.tc.getHelper();
     this.scene?.add(this.helper);
 
     this.dragging = false;
     this.tc.addEventListener("dragging-changed", (e) => {
-      // disable orbit while dragging
       this.dragging = !!e.value;
       if (this.controls) this.controls.enabled = !e.value;
     });
 
-    // hard lock to XZ plane (force Y to remain constant)
     this._lockedY = 0;
     this.tc.addEventListener("objectChange", () => {
       const obj = this.tc.object;
@@ -37,18 +34,12 @@ export default class TransformGizmo {
     this.tc.detach();
   }
 
-  /**
-   * True while the user is actively dragging a gizmo handle.
-   * Useful for suppressing other pointer interactions while dragging.
-   */
+
   isDragging() {
     return !!this.dragging;
   }
 
-  /**
-   * True when a gizmo axis is "hot" (pointer is over a handle).
-   * Useful to avoid selecting board objects when the user clicks the gizmo.
-   */
+
   isHot() {
     return this.tc?.axis != null;
   }

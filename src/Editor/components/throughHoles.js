@@ -1,18 +1,18 @@
 import * as THREE from "three";
+import { PCB_LAYERS } from "../LayerManager";
 
 export default class ThroughHoles {
 
-  constructor(scene, { positions, boundX, boundZ, boardThickness, yCenter = 0, wallColor = 0x111111 }) {
+  constructor(scene, layerManager, { positions, boundX, boundZ, boardThickness, yCenter = 0, wallColor = 0x111111 } = {}) {
     this.scene = scene;
+    this.layerManager = layerManager;
     this.group = new THREE.Group();
     this.group.name = "THROUGH_HOLES";
 
-    for (let i = 0; i < positions.length; i++) {
+    for (let i = 0; i < (positions ?? []).length; i++) {
       const { x, z, r } = positions[i];
       if(Math.abs(x) > 1 || Math.abs(z) > 1 || r <= 0) continue;
       if (!(r > 0)) continue;
-
-      console.log(r);
 
       const wallGeo = new THREE.CylinderGeometry(
         // Slightly smaller than the drilled radius to avoid z-fighting with the board cutout
@@ -37,7 +37,12 @@ export default class ThroughHoles {
       this.group.add(wall);
     }
 
-    this.scene.add(this.group);
+    // Put through-holes under the board layer (so visibility toggles/layering stay consistent)
+    if (this.layerManager?.add) {
+      this.layerManager.add(PCB_LAYERS.BOARD, this.group);
+    } else {
+      this.scene.add(this.group);
+    }
   }
 
   addTo(parent) {
@@ -45,7 +50,13 @@ export default class ThroughHoles {
   }
 
   dispose() {
-    // disposeObject3D(this.group);
+    if (!this.group) return;
+    this.group.traverse((obj) => {
+      if (!obj.isMesh) return;
+      obj.geometry?.dispose?.();
+      obj.material?.dispose?.();
+    });
+    this.group.parent?.remove?.(this.group);
     this.group = null;
   }
 }

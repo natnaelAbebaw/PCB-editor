@@ -175,7 +175,7 @@ export default class PrimitiveManager {
       }));
     });
 
-    this.throughHoles = new ThroughHoles(this.scene, {
+    this.throughHoles = new ThroughHoles(this.scene, this.layerManager, {
       positions: this.holes,
       boardThickness: height,
       yCenter: 0,
@@ -187,10 +187,11 @@ export default class PrimitiveManager {
       const layer =
         tCfg.layer === "BOTTOM_COPPER" ? PCB_LAYERS.BOTTOM_COPPER : PCB_LAYERS.TOP_COPPER;
 
-      return new Traces(this.scene, {
+      return new Traces(this.scene, this.layerManager, {
         points: tCfg.points,
         width: tCfg.width,
         y: this.layerManager.getLayerPosY(layer),
+        layerName: layer,
       });
     });
 
